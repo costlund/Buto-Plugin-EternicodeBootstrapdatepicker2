@@ -1,5 +1,8 @@
-version: '1.0'
+version: '1.1'
 history:
+  '1.1':
+    date: '2019-02-22'
+    description: 'Add own js file. One could insert 550101 and it will be 1955-01-01.'
   '1.0':
     date: '2018-12-11'
     description: 'First version.'
@@ -12,6 +15,4 @@ sys:
 php:
   - '7.2'
 author: null
-links:
-  Github: 'https://github.com'
 description: ''
