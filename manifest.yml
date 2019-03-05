@@ -1,5 +1,8 @@
-version: '1.1'
+version: '1.2'
 history:
+  '1.2':
+    date: '2019-03-05'
+    description: 'Improved date helper.'
   '1.1':
     date: '2019-02-22'
     description: 'Add own js file. One could insert 550101 and it will be 1955-01-01.'

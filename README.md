@@ -27,4 +27,12 @@ if($('#frm_utstillinger_status_capture_Foedselsdato').datepicker){
 
 
 
+How to change date when typing. Default value is 2.
+- 1, 120102, 2012-01-02.
+- 2, 20120102, , 2012-01-02.
+- Other value should turn this off.
+
+```
+PluginEternicodeBootstrapdatepicker2.change_mode=2;
+```
 
