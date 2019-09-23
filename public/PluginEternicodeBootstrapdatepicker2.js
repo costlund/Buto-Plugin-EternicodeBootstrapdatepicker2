@@ -1,8 +1,9 @@
 function PluginEternicodeBootstrapdatepicker2(){
   this.change_mode = 2;
+  this.data = { format: 'yyyy-mm-dd', weekStart: 1, daysOfWeekHighlighted: '0,6', autoclose: true, todayHighlight: true, forceParse: false };
   this.render = function(id){
     if($('#'+id).datepicker){
-      $('#'+id).datepicker({ format: 'yyyy-mm-dd', weekStart: 1, daysOfWeekHighlighted: '0,6', autoclose: true, todayHighlight: true });
+      $('#'+id).datepicker(this.data);
       if(this.change_mode==1){
         /**
          * Set 550101 to 1955-01-01.
@@ -37,7 +38,6 @@ function PluginEternicodeBootstrapdatepicker2(){
           }
           if(change){
             var str = this.value.substr(0,4)+'-'+this.value.substr(4,2)+'-'+this.value.substr(6,2);
-            console.log(str);
             if(PluginEternicodeBootstrapdatepicker2.isDate(str)){
               $('#'+this.id).datepicker('update', str);
             }

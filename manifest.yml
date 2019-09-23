@@ -1,5 +1,8 @@
-version: '1.2'
+version: '1.2.1'
 history:
+  '1.2.1':
+    date: '2019-09-23'
+    description: 'Turn of forceParse.'
   '1.2':
     date: '2019-03-05'
     description: 'Improved date helper.'
@@ -22,3 +25,5 @@ php:
   - '7.2'
 author: Claes Östlund
 description: ''
+links:
+  'bootstrap-datepicker.readthedocs.io': 'https://bootstrap-datepicker.readthedocs.io'
