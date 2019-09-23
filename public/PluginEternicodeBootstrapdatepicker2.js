@@ -1,6 +1,6 @@
 function PluginEternicodeBootstrapdatepicker2(){
   this.change_mode = 2;
-  this.data = { format: 'yyyy-mm-dd', weekStart: 1, daysOfWeekHighlighted: '0,6', autoclose: true, todayHighlight: true, forceParse: false };
+  this.data = { format: 'yyyy-mm-dd', weekStart: 1, daysOfWeekHighlighted: '0,6', autoclose: true, todayHighlight: true, forceParse: true };
   this.render = function(id){
     if($('#'+id).datepicker){
       $('#'+id).datepicker(this.data);
