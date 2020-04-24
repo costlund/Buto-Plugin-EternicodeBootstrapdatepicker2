@@ -36,3 +36,6 @@ How to change date when typing. Default value is 2.
 PluginEternicodeBootstrapdatepicker2.change_mode=2;
 ```
 
+## On blur
+
+If a number is set and user leave field a date will be provided according to the value.

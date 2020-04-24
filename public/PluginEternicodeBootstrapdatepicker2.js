@@ -44,12 +44,31 @@ function PluginEternicodeBootstrapdatepicker2(){
           }
         });
       }
+      /**
+       * Blur
+       * Set a date if a number is set.
+       */
+      $('#'+id).blur(function(){
+        this.value = this.value.trim();
+        if(PluginEternicodeBootstrapdatepicker2.isInt(this.value)){
+          var date = new Date();
+          date.setDate(date.getDate() + parseInt(this.value));
+          this.value = date.toLocaleString('sv-SE');
+          this.value = this.value.substr(0, 10);
+        }
+      });
     }else{
       console.log('PluginEternicodeBootstrapdatepicker2 says: Some error...');
     }
   }
   this.isDate = function(date) {
     return (new Date(date) !== "Invalid Date" && !isNaN(new Date(date)) ) ? true : false;
+  }
+  this.isInt = function(value) {
+    value = value.trim();
+    return !isNaN(value) && 
+           parseInt(Number(value)) == value && 
+           !isNaN(parseInt(value, 10));
   }
 }
 var PluginEternicodeBootstrapdatepicker2 = new PluginEternicodeBootstrapdatepicker2();
