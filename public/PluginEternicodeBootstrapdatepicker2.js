@@ -1,6 +1,6 @@
 function PluginEternicodeBootstrapdatepicker2(){
   this.change_mode = 2;
-  this.data = { format: 'yyyy-mm-dd', weekStart: 1, daysOfWeekHighlighted: '0,6', autoclose: true, todayHighlight: true, forceParse: false };
+  this.data = { format: 'yyyy-mm-dd', weekStart: 1, daysOfWeekHighlighted: '0,6', autoclose: true, todayHighlight: true, forceParse: true };
   this.render = function(id){
     if($('#'+id).datepicker){
       $('#'+id).datepicker(this.data);
@@ -56,6 +56,13 @@ function PluginEternicodeBootstrapdatepicker2(){
           this.value = date.toLocaleString('sv-SE');
           this.value = this.value.substr(0, 10);
         }
+      });
+      /**
+       * 
+       */
+      $('#'+id).datepicker()
+          .on('changeDate', function(e) {
+            // event changeDate...
       });
     }else{
       console.log('PluginEternicodeBootstrapdatepicker2 says: Some error...');

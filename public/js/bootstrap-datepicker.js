@@ -492,9 +492,12 @@
 			this._detachSecondaryEvents();
 			this.viewMode = this.o.startView;
 			this.showMode();
-
 			if (this.o.forceParse && this.inputField.val())
-				this.setValue();
+                          /**
+                           * CÖ, 200608
+                           * Remove this because if forceParse is true and leaving input with incorrect date a date (today) will be set and this could resolving in unespected results.
+                           */
+				if(false){this.setValue();}
 			this._trigger('hide');
 			return this;
 		},
