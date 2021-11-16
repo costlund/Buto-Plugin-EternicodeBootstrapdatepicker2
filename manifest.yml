@@ -1,5 +1,9 @@
-version: 1.5.1
+version: 1.6.0
 history:
+  1.6.0:
+    date: '2021-11-16'
+    label: 'Set date'
+    description: 'Set date in picker when it show up.'
   1.5.1:
     date: '2020-10-07'
     label: Versions

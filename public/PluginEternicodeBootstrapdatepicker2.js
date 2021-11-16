@@ -58,6 +58,24 @@ function PluginEternicodeBootstrapdatepicker2(){
         }
       });
       /**
+       * Set date if attribute datepicker_show not exist.
+       * Add attribute datepicker_show.
+       */
+      $('#'+id).datepicker()
+          .on('show', function(e) {
+            if(!$('#'+id).attr('datepicker_show')){
+              $('#'+id).datepicker('update', $('#'+id).val());
+            }
+            $('#'+id).attr('datepicker_show', true);
+      });
+      /**
+       * Remove attribute datepicker_show.
+       */
+       $('#'+id).datepicker()
+          .on('hide', function(e) {
+            $('#'+id).removeAttr('datepicker_show');
+      });
+      /**
        * 
        */
       $('#'+id).datepicker()
