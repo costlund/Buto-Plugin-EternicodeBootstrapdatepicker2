@@ -1,7 +1,7 @@
 function PluginEternicodeBootstrapdatepicker2(){
   this.change_mode = 2;
   this.data = { format: 'yyyy-mm-dd', weekStart: 1, daysOfWeekHighlighted: '0,6', autoclose: true, todayHighlight: true, forceParse: true, calendarWeeks: true };
-  this.render = function(id){
+  this.render = function(id, onchange_method){
     if($('#'+id).datepicker){
       $('#'+id).datepicker(this.data);
       if(this.change_mode==1){
@@ -79,8 +79,10 @@ function PluginEternicodeBootstrapdatepicker2(){
        * 
        */
       $('#'+id).datepicker()
-          .on('changeDate', function(e) {
-            // event changeDate...
+        .on('changeDate', function(e) {
+          if(typeof onchange_method != 'undefined'){
+            onchange_method(e);
+          }
       });
     }else{
       console.log('PluginEternicodeBootstrapdatepicker2 says: Some error...');

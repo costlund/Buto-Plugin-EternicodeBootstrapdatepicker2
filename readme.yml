@@ -1,0 +1,47 @@
+readme:
+  name: Buto-Plugin-EternicodeBootstrapdatepicker2
+  date: '2024-11-20'
+  description: |
+    Bootstrap datepicker.
+  item:
+    -
+      name: Usage
+      description: |
+        Javascript.
+        ```
+        PluginEternicodeBootstrapdatepicker2.render('_id_of_input_')
+        ```
+        Add a onchange method.
+        ```
+        PluginEternicodeBootstrapdatepicker2.render('_id_of_input_', test)
+        function test(e){console.log(e);}
+        ```
+        Or direct via theirs library.
+        ```
+        if($('#frm_utstillinger_status_capture_Foedselsdato').datepicker){
+          this.datepicker = $('#frm_utstillinger_status_capture_Foedselsdato').datepicker({ format: 'yyyy-mm-dd', weekStart: 1, daysOfWeekHighlighted: '0,6', autoclose: true, todayHighlight: true });
+        }
+        ```
+        How to change date when typing. Default value is 2.
+        ```
+        PluginEternicodeBootstrapdatepicker2.change_mode=2;
+        ```
+        - Mode 1, 120102, 2012-01-02.
+        - Mode 2, 20120102, , 2012-01-02.
+
+        If a number is set and user leave field a date will be provided according to the value.
+        - Set value 10 will render a date ten days from now.
+        - Set value -10 will render a date minus ten days from now.
+    -
+      name: Widgets
+      item:
+        -
+          name: widget_include
+          description: |
+            Include in head.
+            ```
+            type: widget
+            data:
+              plugin: eternicode/bootstrapdatepicker2
+              method: include
+            ```
